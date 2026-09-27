@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'it' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} — Home page">
+          <span class="logo-mark" aria-hidden="true">S</span>
+          <span class="logo-text"><strong>ASD</strong> Il Sentiero</span>
+        </a>
+        <nav class="site-nav" aria-label="Navigazione principale">
+          <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+          <a href="{{ '/associazione/' | relative_url }}"{% if page.url == '/associazione/' %} aria-current="page"{% endif %}>L'associazione</a>
+          <a href="{{ '/sedi/' | relative_url }}"{% if page.url == '/sedi/' %} aria-current="page"{% endif %}>Le sedi</a>
+          <a href="{{ '/discipline/' | relative_url }}"{% if page.url == '/discipline/' %} aria-current="page"{% endif %}>Le discipline</a>
+          <a href="{{ '/iniziative-eventi/' | relative_url }}"{% if page.url == '/iniziative-eventi/' %} aria-current="page"{% endif %}>Iniziative ed eventi</a>
+          <a href="{{ '/contatti/' | relative_url }}"{% if page.url == '/contatti/' %} aria-current="page"{% endif %}>Contatti</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ASD Il Sentiero</strong>
+        <p>Tai Chi Chuan · Qi Gong · Ba Gua Zang</p>
+      </div>
+      <a href="{{ '/contatti/' | relative_url }}">Contattaci</a>
+    </footer>
+  </body>
+</html>
