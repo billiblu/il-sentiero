@@ -1,0 +1,18 @@
+title: ASD Il Sentiero
+description: Tai Chi Chuan, Qi Gong e Ba Gua Zang
+lang: it
+baseurl: /il-sentiero
+url: ""
+markdown: kramdown
+permalink: pretty
+
+collections:
+  events:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
